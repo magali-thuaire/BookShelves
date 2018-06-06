@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
-import { reject, resolve } from 'q';
 
 @Injectable({
 	providedIn: 'root'
@@ -42,7 +41,7 @@ export class AuthService {
 	}
 
 	// Déconnexion d'un utilisateur
-	signOut() {
+	signOutUser() {
 		firebase.auth().signOut();
 	}
 }
