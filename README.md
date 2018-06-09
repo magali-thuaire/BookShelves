@@ -27,9 +27,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-> npm install
+> npm install --save
 > npm install jquery@latest --save
 > npm install popper.js@latest --save
 > npm install bootstrap@latest --save
 > npm install bootstrap@latest --save
-> npm install font-awesome angular-font-awesome --save 
+> npm install font-awesome angular-font-awesome --save
+> npm install firebase --save  
