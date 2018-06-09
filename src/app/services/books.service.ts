@@ -3,8 +3,6 @@ import { Book } from '../models/Book.model';
 import { Subject } from 'rxjs';
 import * as firebase from 'firebase';
 import DataSnapshot = firebase.database.DataSnapshot;
-import { resolve } from 'path';
-import { reject } from 'q';
 
 @Injectable()
 export class BooksService {
