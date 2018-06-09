@@ -2,20 +2,21 @@ import { Component } from '@angular/core';
 import * as firebase from 'firebase';
 
 @Component({
-	selector: 'app-root',
-	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	constructor() {
-		var config = {
-			apiKey: "AIzaSyAxBwXB0SLOQcCfiRvo_pEw6e5X6HOjSI8",
-			authDomain: "bookshelves-dab6b.firebaseapp.com",
-			databaseURL: "https://bookshelves-dab6b.firebaseio.com",
-			projectId: "bookshelves-dab6b",
-			storageBucket: "bookshelves-dab6b.appspot.com",
-			messagingSenderId: "117552658411"
-		};
-		firebase.initializeApp(config);
-	}
+    constructor() {
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD4BT2TOyVcsCoJJJEADPs8WipXrjlQraw",
+            authDomain: "bookshelves-a20ef.firebaseapp.com",
+            databaseURL: "https://bookshelves-a20ef.firebaseio.com",
+            projectId: "bookshelves-a20ef",
+            storageBucket: "bookshelves-a20ef.appspot.com",
+            messagingSenderId: "223343333232"
+        };
+        firebase.initializeApp(config);
+    }
 }
