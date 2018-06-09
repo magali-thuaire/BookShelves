@@ -1,3 +1,24 @@
-<p>
-  book-form works!
-</p>
+<main>
+    <section>
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h2>Nouveau livre</h2>
+                <form [formGroup]="bookForm" (ngSubmit)="onSaveBook()">
+                    <div class="form-group">
+                      <label for="title"></label>
+                      <input type="text" formControlName="title" id="title" class="form-control" placeholder="titre du livre">
+                    </div>
+                    <div class="form-group">
+                      <label for="author"></label>
+                      <input type="text" formControlName="author" id="author" class="form-control" placeholder="auteur du livre">
+                    </div>
+                    <button class="btn btn-success mt-5"
+                            [disabled]="bookForm.invalid"
+                            type="submit">
+                        Enregistrer
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
