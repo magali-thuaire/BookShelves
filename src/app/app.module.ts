@@ -14,6 +14,7 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
+import { AngularFontAwesomeModule } from "angular-font-awesome";
 
 const appRoutes: Routes = [
 	{ path: 'auth/signup', component: SignupComponent },
@@ -26,28 +27,25 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		SignupComponent,
-		SigninComponent,
-		BookListComponent,
-		SingleBookComponent,
-		BookFormComponent,
-		HeaderComponent
-	],
-	imports: [
-		BrowserModule,
-		FormsModule,
-		ReactiveFormsModule,
-		HttpClientModule,
-		RouterModule,
-		RouterModule.forRoot(appRoutes)
-	],
-	providers: [
-		AuthService,
-		BooksService,
-		AuthGuardService
-	],
-	bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    SignupComponent,
+    SigninComponent,
+    BookListComponent,
+    SingleBookComponent,
+    BookFormComponent,
+    HeaderComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule,
+    RouterModule.forRoot(appRoutes),
+    AngularFontAwesomeModule
+  ],
+  providers: [AuthService, BooksService, AuthGuardService],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
