@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HeaderComponent } from './header/header.component';
 
+import { BookService } from "./services/book.service";
+
 const routes: Routes = [
   { path: 'books', component: AppComponent },
   { path: '', component: AppComponent },
@@ -24,7 +26,9 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    BookService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
