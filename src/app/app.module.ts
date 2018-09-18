@@ -8,10 +8,11 @@ import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HeaderComponent } from './header/header.component';
 
 import { BookService } from "./services/book.service";
+import { BookListComponent } from './book-list/book-list.component';
 
 const routes: Routes = [
-  { path: 'books', component: AppComponent },
-  { path: '', component: AppComponent },
+  { path: 'books', component: BookListComponent },
+  { path: '', component: BookListComponent },
   { path: 'not-found', component: FourOhFourComponent },
   { path: '**', redirectTo: 'not-found' }
 ];
@@ -20,7 +21,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     FourOhFourComponent,
-    HeaderComponent
+    HeaderComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
