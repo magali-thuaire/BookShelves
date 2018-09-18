@@ -8,7 +8,9 @@ import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 
 const routes: Routes = [
   { path: 'books', component: AppComponent },
-  { path: '', component: AppComponent }
+  { path: '', component: AppComponent },
+  { path: 'not-found', component: FourOhFourComponent },
+  { path: '**', redirectTo: 'not-found' }
 ];
 
 @NgModule({
