@@ -6,7 +6,7 @@
               *ngFor="let book of books">
         <div class="d-flex justify-content-between">
           <h2 class="list-group-item-heading">{{ book.title }}</h2>
-          <button class="btn btn-default"><i class="fa fa-trash"></i></button>
+          <button class="btn btn-default" (click)="onDeleteBook(book)"><i class="fa fa-trash"></i></button>
         </div>
         <p class="text-left">{{ book.author }}</p>
       </button>

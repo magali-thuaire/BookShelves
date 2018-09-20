@@ -28,4 +28,9 @@ export class BookListComponent implements OnInit {
     this.bookService.emitBooks();
   }
 
+  // Supression d'un livre
+  onDeleteBook(book: Book) {
+    this.bookService.deleteBook(book);
+  }
+
 }
