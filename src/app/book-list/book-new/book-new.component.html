@@ -1,3 +1,15 @@
-<p>
-  book-new works!
-</p>
+<div class="row">
+  <div class="col-12">
+    <form [formGroup]="bookForm" (submit)="onNewBook()">
+      <div class="form-group">
+        <label for="title">Titre</label>
+        <input type="text"  id="title" class="form-control" formControlName="title">
+      </div>
+      <div class="form-group">
+        <label for="author">Auteur</label>
+        <input type="text"  id="author" class="form-control" formControlName="author">
+      </div>
+      <button class="btn btn-success submit" [disabled]="bookForm.invalid">Enregistrer</button>
+    </form>
+  </div>
+</div>

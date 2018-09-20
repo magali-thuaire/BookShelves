@@ -38,4 +38,9 @@ export class BookService {
     // Emission du tableau des livres
     this.emitBooks();
   }
+
+  // Ajout d'un livre
+  NewBook(book: Book) {
+    this.books.push(book);
+  }
 }

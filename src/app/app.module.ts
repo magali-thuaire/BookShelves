@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ReactiveFormsModule } from "@angular/forms";
+
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -10,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { BookService } from "./services/book.service";
 import { BookListComponent } from './book-list/book-list.component';
 import { BookNewComponent } from './book-list/book-new/book-new.component';
+
 
 const routes: Routes = [
   { path: 'books', component: BookListComponent },
@@ -29,7 +32,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule
   ],
   providers: [
     BookService
