@@ -9,10 +9,12 @@ import { HeaderComponent } from './header/header.component';
 
 import { BookService } from "./services/book.service";
 import { BookListComponent } from './book-list/book-list.component';
+import { BookNewComponent } from './book-list/book-new/book-new.component';
 
 const routes: Routes = [
   { path: 'books', component: BookListComponent },
   { path: '', component: BookListComponent },
+  { path: 'books/new', component: BookNewComponent },
   { path: 'not-found', component: FourOhFourComponent },
   { path: '**', redirectTo: 'not-found' }
 ];
@@ -22,7 +24,8 @@ const routes: Routes = [
     AppComponent,
     FourOhFourComponent,
     HeaderComponent,
-    BookListComponent
+    BookListComponent,
+    BookNewComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BookService } from "../services/book.service";
 import { Book } from "../models/Book.model";
 import { Subscription } from "rxjs";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-book-list',
@@ -15,7 +16,8 @@ export class BookListComponent implements OnInit {
   // Souscription au tableau privé des livres
   booksSubscription: Subscription;
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService,
+              private router: Router) { }
 
   ngOnInit() {
     // Initialisation de la souscription au tableau privé des livres
@@ -31,6 +33,10 @@ export class BookListComponent implements OnInit {
   // Supression d'un livre
   onDeleteBook(book: Book) {
     this.bookService.deleteBook(book);
+  }
+
+  onNewBook() {
+    this.router.navigate(['/books', 'new']);
   }
 
 }
